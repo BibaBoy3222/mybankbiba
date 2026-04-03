@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
 import { 
   LayoutDashboard, 
@@ -23,8 +23,6 @@ import {
   Bitcoin,
   XCircle,
   QrCode,
-  PiggyBank,
-  MapPin,
   Globe,
   ChevronRight,
   Search,
@@ -32,7 +30,6 @@ import {
   Wifi,
   CreditCard as CreditIcon,
   RefreshCcw,
-  ArrowDownLeft,
   Eye,
   EyeOff,
   Fingerprint,
@@ -174,7 +171,7 @@ const Dashboard: React.FC = () => {
 
   // Mock data states
   const [balance, setBalance] = useState(12450000);
-  const [btcBalance, setBalanceBtc] = useState(14.25);
+  const [btcBalance] = useState(14.25);
   
   const [userCards, setUserCards] = useState([
     { id: 1, type: 'OBSIDIAN', name: 'INFINITE', number: '4412 8821 0092 4242', balance: '8,400,000 ₽', color: 'from-[#0a0a0a] to-[#1a1a1a]', isLocked: false, limit: 5000000, spent: 1500000 },
